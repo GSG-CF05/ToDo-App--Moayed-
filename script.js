@@ -22,7 +22,7 @@ function editToDo(index, newTxe) {
   localStorage.setItem("todos", JSON.stringify(toDosArr));
   loadToDos();
 }
-// Show or hide the edit input and the save button 
+// Show or hide the edit input and the save button
 function showOrHideEditDiv(index) {
   let allTodos = document.querySelectorAll("li > div.todoItem");
   let editTodo = document.querySelectorAll("li > div.editTodo");
@@ -46,7 +46,7 @@ function deleteToDo(index) {
   loadToDos();
 }
 
-// Create the  list items 
+// Create the  list items
 function loadToDos() {
   // reset the todos list view
   resetArray();

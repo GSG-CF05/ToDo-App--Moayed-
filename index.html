@@ -4,7 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <title>TO DO APP</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
@@ -13,16 +21,19 @@
   <body>
     <div class="container">
       <div class="todoApp">
-        <h1>TODO App</h1>
+        <h1>TO DO App</h1>
         <div class="todo">
           <form id="addTodoFrom">
-            <input type="text" class="todoInput" id="todoInput" />
+            <input
+              type="text"
+              class="todoInput"
+              id="todoInput"
+              placeholder="Enter your ToDos"
+            />
             <button type="submit" id="add"><i class="fa fa-plus"></i></button>
           </form>
         </div>
-        <ul id="todosList">
-         
-        </ul>
+        <ul id="todosList"></ul>
       </div>
     </div>
     <script src="script.js"></script>

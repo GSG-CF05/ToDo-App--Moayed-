@@ -1,12 +1,12 @@
-#ToDo-App-Moayed :grinning:
+# ToDo-App-Moayed :grinning:
 
-##:point_right:Project Description :
+## :point_right:Project Description :
 
 ToDo App is an easy-to-use and useful application for arranging tasks and setting daily and weekly goals and helps to make better use of time.
 
 Where you can add tasks and when they are completed, you delete them in a flexible and easy way
 
-##:point_right:User Story:
+## :point_right:User Story:
 
 - As user you can add to-do to the list and save it in local storage.
 
@@ -14,9 +14,9 @@ Where you can add tasks and when they are completed, you delete them in a flexib
 
 - also you can still have the list even if he close the browser window.
 
-##:point_right:check her for the app:)[My Todo.](https://gsg-cf05.github.io/ToDo-App-Moayed/)
+## :point_right:check her for the app:)[My Todo.](https://gsg-cf05.github.io/ToDo-App-Moayed/)
 
-##:point_right: Follow the steps below to get the project on local machine:
+## :point_right: Follow the steps below to get the project on local machine:
 
 - Clone the repo by copy the link from button(code).
 - Open your terminal and Create folder in your computer.
@@ -24,4 +24,4 @@ Where you can add tasks and when they are completed, you delete them in a flexib
 - Use (code .) command to open VSC.
 - Watch the project and give us your opinion:)
 
-##:point_right:hand made By: [Moayed A Al-Nabahin:)](https://github.com/moayed-nabahin)
+## :point_right:hand made By: [Moayed A Al-Nabahin:)](https://github.com/moayed-nabahin)

@@ -5,39 +5,136 @@
 }
 
 body {
-  background-color: rgb(171, 190, 207);
+  background-color: #e5e7e7;
+  margin-bottom: 20px;
+  min-height: 100%;
+}
+
+.todo {
+  background-color: #b8d8d8;
 }
 
 h1 {
   display: flex;
   justify-content: center;
   padding: 30px;
-  margin-bottom: 20px;
-  background-color: rgb(72, 97, 119);
+  background-color: #4f6367;
   font-family: "Anton";
+  color: #b8d8d8;
 }
 
 #addTodoFrom {
   display: flex;
   justify-content: center;
   padding: 30px;
-  margin-bottom: 20px;
 }
+
 #todoInput {
   border: none;
-  padding: 10px 40px;
+  padding: 10px 10px;
   border-radius: 10px 0px 0px 10px;
+  width: 95%;
+  color: #4f6367;
+  font-size: 16px;
+  font-weight: bold;
 }
 #add {
   border: none;
   padding: 10px 20px;
   border-radius: 0px 10px 10px 0px;
-  background-color: rgb(132, 141, 148);
+  background-color: #fe5f55;
+}
+#add i {
+  color: #4f6367;
+}
+.todoApp {
+  background-color: #b8d8d8;
+  height: 900px;
+}
+.todoItem {
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding: 5px;
+  color: #4f6367;
+  font-weight: 1000;
+}
+
+button {
+  border: none;
+  background-color: #fff;
+}
+
+li button i.fa-trash {
+  color: #fe5f55;
+  margin-left: 10px;
+  padding-right: 14px;
+  background-color: #fff;
+}
+
+li button i.fa-edit {
+  color: #4f6367;
+  background-color: #fff;
 }
 
 .editTodo {
   display: none;
+  text-align: center;
+  height: 35px;
+  flex: 0 0 100%;
+  justify-content: stretch;
+  align-items: center;
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 10px;
 }
-.todoItem {
-  display: block;
+
+.editTodo input {
+  border: none;
+  margin: 0;
+  padding: 10px 10px;
+  border-radius: 10px 0px 0px 10px;
+  width: 80%;
+  color: #4f6367;
+  font-size: 16px;
+  font-weight: bold;
+  flex-grow: 8;
+}
+
+.editTodo button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0px 10px 10px 0px;
+  background-color: #fe5f55;
+  color: #4f6367;
+  font-size: 14px;
+  font-weight: bold;
+  flex-grow: 1;
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  .container {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+@media (min-width: 900px) {
+  .container {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
 }

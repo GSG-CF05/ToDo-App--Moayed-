@@ -18,6 +18,10 @@ function addToDo(e) {
 }
 // edit todo item based on index with the new text
 function editToDo(index, newTxe) {
+  if (newTxe == "") {
+    loadToDos();
+    return;
+  }
   toDosArr[index] = newTxe;
   localStorage.setItem("todos", JSON.stringify(toDosArr));
   loadToDos();
@@ -28,13 +32,13 @@ function showOrHideEditDiv(index) {
   let editTodo = document.querySelectorAll("li > div.editTodo");
 
   if (getComputedStyle(allTodos[index]).display == "none") {
-    allTodos[index].style.display = "block";
+    allTodos[index].style.display = "flex";
   } else {
     allTodos[index].style.display = "none";
   }
 
   if (getComputedStyle(editTodo[index]).display == "none") {
-    editTodo[index].style.display = "block";
+    editTodo[index].style.display = "flex";
   } else {
     editTodo[index].style.display = "none";
   }
@@ -58,19 +62,23 @@ function loadToDos() {
     todoDiv.className = "todoItem";
     todoDiv.innerText = toDosArr[i];
     // create and append the edit button and icon
+    let todoActionDiv = document.createElement("div");
     let editBtn = document.createElement("button");
     let editIcon = document.createElement("i");
     editIcon.className = "fa fa-edit";
     editBtn.setAttribute("onclick", "showOrHideEditDiv(" + i + ")");
     editBtn.appendChild(editIcon);
-    todoDiv.appendChild(editBtn);
+    todoActionDiv.appendChild(editBtn);
     // create and append the delete button and icon
     let delBtn = document.createElement("button");
     let delIcon = document.createElement("i");
     delIcon.className = "fa fa-trash";
     delBtn.setAttribute("onclick", "deleteToDo(" + i + ")");
     delBtn.appendChild(delIcon);
-    todoDiv.appendChild(delBtn);
+    todoActionDiv.appendChild(delBtn);
+
+    todoDiv.appendChild(todoActionDiv);
+
     // append the todo div to the li
     todoLi.appendChild(todoDiv);
     // create the edit div that contains the edit input and save button
@@ -101,7 +109,7 @@ function loadToDos() {
   }
 }
 
-// Remove or refresh  the original todos list elementst
+// Remove or refresh  the original todos list elements
 function resetArray() {
   let child = todosList.lastElementChild;
   while (child) {
